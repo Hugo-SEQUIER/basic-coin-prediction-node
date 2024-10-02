@@ -4,7 +4,6 @@ transformers[torch]
 pandas
 git+https://github.com/amazon-science/chronos-forecasting.git
 numpy
-pandas==2.2.2
 Requests
 aiohttp
 multiprocess
