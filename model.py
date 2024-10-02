@@ -2,6 +2,7 @@ import json
 import os
 import pickle
 import pandas as pd
+import numpy as np  # Add this import
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
@@ -49,9 +50,8 @@ def prepare_training_data():
     df = pd.DataFrame(articles)
     df['text'] = df['title'] + " " + df['description'].fillna("")
     
-    # This is a placeholder. In a real scenario, you'd need actual labeled data.
-    # For demonstration, we're randomly assigning labels.
-    df['label'] = pd.np.random.choice([0, 1], size=len(df))
+    # Replace pd.np with direct numpy import
+    df['label'] = np.random.choice([0, 1], size=len(df))
     
     df[['text', 'label']].to_csv(training_data_path, index=False)
     print(f"Prepared training data with {len(df)} samples")
