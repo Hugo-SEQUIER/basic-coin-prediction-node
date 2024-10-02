@@ -13,7 +13,7 @@ def inference(token):
     try:
         republican_likelihood = get_inference()
         if republican_likelihood is not None:
-            return Response(str(republican_likelihood), status=200)
+            return Response(json.dumps({"value": str(republican_likelihood)}), status=200, mimetype='application/json')
         else:
             return Response(json.dumps({"error": "Failed to generate inference"}), 
                             status=500, 

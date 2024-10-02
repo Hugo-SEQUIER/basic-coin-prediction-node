@@ -75,6 +75,10 @@ def train_model():
     print(f"Trained model saved to {model_file_path}")
 
 def get_inference():
+    if not os.path.exists(model_file_path):
+        print(f"Model file not found at {model_file_path}")
+        return None
+
     with open(model_file_path, "rb") as f:
         loaded_model = pickle.load(f)
 
