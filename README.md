@@ -94,7 +94,7 @@ This setup allows you to develop your model without the need to bring up the off
 2. Send requests to the inference model. For example, request ETH price inferences:
     
     ```sh
-    curl http://127.0.0.1:8070/inference/ETH
+    curl http://127.0.0.1:8060/inference/ETH
     ```
     Expected response:
     ```json
@@ -104,7 +104,7 @@ This setup allows you to develop your model without the need to bring up the off
 3. Update the node's internal state (download pricing data, train, and update the model):
     
     ```sh
-    curl http://127.0.0.1:8070/update
+    curl http://127.0.0.1:8060/update
     ```
     Expected response:
     ```sh
