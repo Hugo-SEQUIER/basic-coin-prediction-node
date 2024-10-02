@@ -45,11 +45,11 @@ schedule.every().day.at("00:00").do(daily_update)
 if __name__ == '__main__':
     # Run the scheduler in a separate thread
     import threading
-    scheduler_thread = threading.Thread(target=lambda: 
+    def run_scheduler():
         while True:
             schedule.run_pending()
-            time.sleep(1)
-    )
+
+    scheduler_thread = threading.Thread(target=run_scheduler)
     scheduler_thread.start()
-    
+
     app.run(host="0.0.0.0", port=8060, debug=True)
