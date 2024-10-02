@@ -1,6 +1,7 @@
 flask[async]
 gunicorn[gthread]
 transformers[torch]
+schedule
 pandas
 git+https://github.com/amazon-science/chronos-forecasting.git
 numpy
