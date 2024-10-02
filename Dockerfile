@@ -8,6 +8,9 @@ WORKDIR /app
 
 # Install dependencies
 COPY requirements.txt requirements.txt
+# Install git
+RUN apt-get update && apt-get install -y git
+
 RUN pip install --upgrade pip setuptools \
     && pip install -r requirements.txt
 
