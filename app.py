@@ -7,8 +7,8 @@ from model import download_news_data, prepare_training_data, train_model, get_in
 # create our Flask app
 app = Flask(__name__)
 
-@app.route("/inference")
-def inference():
+@app.route("/inference/<token>")
+def inference(token):
     """Generate inference for US presidential election."""
     try:
         republican_likelihood = get_inference()
