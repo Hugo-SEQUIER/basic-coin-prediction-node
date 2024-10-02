@@ -1,7 +1,7 @@
 {
     "wallet": {
-        "addressKeyName": "test",
-        "addressRestoreMnemonic": "",
+        "addressKeyName": "testkey",
+        "addressRestoreMnemonic": "truck rotate music silver eye cloud control torch curve bundle dolphin unique rare warm tragic lazy number welcome label pull find fetch radio network",
         "alloraHomeDir": "",
         "gas": "auto",
         "gasAdjustment": 1.5,
@@ -16,7 +16,7 @@
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 5,
             "parameters": {
-                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://inference:8070/inference/{Token}",
                 "Token": "ETH"
             }
         }

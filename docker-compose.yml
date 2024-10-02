@@ -6,9 +6,9 @@ services:
     build: .
     command: python -u /app/app.py
     ports:
-      - "8000:8000"
+      - "8070:8070"
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://inference:8000/inference/${TOKEN}"]
+      test: ["CMD", "curl", "-f", "http://inference:8070/inference/${TOKEN}"]
       interval: 10s
       timeout: 5s
       retries: 12
@@ -19,7 +19,7 @@ services:
     container_name: updater
     build: .
     environment:
-      - INFERENCE_API_ADDRESS=http://inference:8000
+      - INFERENCE_API_ADDRESS=http://inference:8070
     command: >
       sh -c "
       while true; do
